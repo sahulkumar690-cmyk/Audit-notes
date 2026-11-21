@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditing Theory – Hindi Training Notes</title>
+<style>
+:root{
+  --navy:#10233f;--blue:#1d4ed8;--light:#eff6ff;--ink:#1f2937;
+  --muted:#64748b;--line:#dbe3ef;--paper:#ffffff;--bg:#f3f6fb;
+  --green:#087f5b;--gold:#b45309;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;line-height:1.75}
+header{background:linear-gradient(130deg,#10233f,#1d4ed8);color:white;padding:42px 20px}
+.hero{max-width:1100px;margin:auto}
+.kicker{letter-spacing:2px;text-transform:uppercase;font-size:.78rem;opacity:.85}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;margin:12px 0}
+header p{max-width:760px;margin:12px 0 0;color:#e5edff}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:22px}
+nav,.content section,.intro,.quiz{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 20px #0f172a0a}
+nav{padding:18px;height:max-content;position:sticky;top:16px}
+nav h2{font-size:1.05rem;margin:0 0 10px;color:var(--navy)}
+nav a{display:block;text-decoration:none;color:#334155;padding:7px 9px;border-radius:8px;font-size:.92rem}
+nav a:hover{background:var(--light);color:var(--blue)}
+main{min-width:0}
+.intro{padding:20px 22px;margin-bottom:18px}
+.intro h2{margin:0 0 8px;color:var(--navy)}
+.content section{padding:22px;margin:0 0 18px;scroll-margin-top:20px}
+h2{color:var(--navy);font-size:1.45rem;margin:0 0 12px}
+h3{color:#1e40af;font-size:1.08rem;margin:20px 0 7px}
+p{margin:8px 0}
+ul,ol{padding-left:24px}
+li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#eaf1ff;color:#17366b}
+.callout{background:#eff6ff;border-left:4px solid var(--blue);padding:12px 14px;border-radius:8px;margin:12px 0}
+.example{background:#f0fdf4;border-left:4px solid var(--green);padding:12px 14px;border-radius:8px;margin:12px 0}
+.small{font-size:.9rem;color:var(--muted)}
+.tag{display:inline-block;background:#e0eaff;color:#1e40af;padding:3px 9px;border-radius:99px;font-size:.78rem;font-weight:700}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0}
+.flow span{background:#eef4ff;border:1px solid #cbdafa;border-radius:9px;padding:8px 11px;font-weight:600}
+.flow b{color:var(--blue)}
+button{border:0;background:var(--blue);color:white;padding:10px 16px;border-radius:9px;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(.93)}
+.quiz{padding:22px;margin:18px 0}
+.q{border-top:1px solid var(--line);padding:14px 0}
+.q:first-of-type{border-top:0}
+label{display:block;margin:5px 0}
+.result{font-weight:700;margin-top:12px}
+footer{text-align:center;color:var(--muted);padding:25px 15px}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}nav{position:static}nav .links{display:grid;grid-template-columns:1fr 1fr;gap:2px}}
+@media(max-width:480px){header{padding:30px 17px}.content section,.intro,.quiz{padding:17px}table{font-size:.84rem}th,td{padding:7px}}
+@media print{
+ body{background:white;color:#111;font-size:11pt}
+ header{background:white;color:#111;padding:15px 0;border-bottom:2px solid #222}
+ header p{color:#333}.wrap{display:block;max-width:none;margin:0;padding:0}
+ nav,button,.quiz{display:none!important}
+ .intro,.content section{box-shadow:none;border:0;border-radius:0;padding:12px 0;break-inside:avoid}
+ h2,h3{color:#111}th{background:#eee!important}
+ a{color:#111;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="hero">
+  <div class="kicker">Hindi Medium • Training Notes • Chapters 1–10</div>
+  <h1>Auditing Theory<br>ऑडिटिंग के संपूर्ण हिंदी नोट्स</h1>
+  <p>परीक्षा की तैयारी और Practical Accounts Training के लिए आसान हिंदी में सिद्धांत, उदाहरण, जाँच-सूची और महत्वपूर्ण प्रश्न।</p>
+ </div>
+</header>
+
+<div class="wrap">
+<nav>
+ <h2>विषय सूची</h2>
+ <div class="links">
+  <a href="#ch1">1. ऑडिट का परिचय</a>
+  <a href="#ch2">2. Auditor और Ethics</a>
+  <a href="#ch3">3. Audit Planning</a>
+  <a href="#ch4">4. कानून और नियम</a>
+  <a href="#ch5">5. Internal Control</a>
+  <a href="#ch6">6. Vouching & Statements</a>
+  <a href="#ch7">7. नियुक्ति व दायित्व</a>
+  <a href="#ch8">8. Cost Audit & CARO</a>
+  <a href="#ch9">9. विशेष ऑडिट</a>
+  <a href="#ch10">10. EDP Audit</a>
+  <a href="#practical">Practical Workflow</a>
+  <a href="#questions">महत्वपूर्ण प्रश्न</a>
+ </div>
+ <p class="small">टिप: मोबाइल पर विषय चुनकर सीधे उस अध्याय पर जाएँ।</p>
+ <button onclick="window.print()">Print / Save PDF</button>
+</nav>
+
+<main>
+<div class="intro">
+ <h2>कोर्स का उद्देश्य</h2>
+ <p>ऑडिटिंग का उद्देश्य खातों और वित्तीय विवरणों की व्यवस्थित जाँच करना, महत्वपूर्ण गलतियों (Errors) और धोखाधड़ी (Fraud) के जोखिम पहचानना तथा Financial Statements पर स्वतंत्र राय बनाने में सहायता करना है।</p>
+ <ul>
+  <li>Books of Accounts, Bills, Vouchers और Ledgers की जाँच समझना।</li>
+  <li>Cash, Purchase, Sales, Stock, Assets और Liabilities Verify करना।</li>
+  <li>Internal Control और कानूनी अनुपालन का मूल्यांकन करना।</li>
+  <li>Audit Evidence, Working Papers और Audit Report समझना।</li>
+ </ul>
+ <div class="callout"><b>महत्वपूर्ण:</b> ये अध्ययन नोट्स शैक्षणिक उद्देश्य के लिए हैं। वास्तविक ऑडिट में लागू कानून, नवीनतम नियम, ICAI Standards on Auditing और संस्था-विशेष की आवश्यकताओं की पुष्टि करें।</div>
+</div>
+
+<div class="content">
+<section id="ch1">
+ <span class="tag">अध्याय 1</span><h2>Introduction to Auditing – ऑडिट का परिचय</h2>
+ <h3>1.1 ऑडिट का इतिहास (Origin of Audit)</h3>
+ <p>Audit शब्द लैटिन शब्द <b>Audire</b> से निकला है, जिसका अर्थ है “सुनना” (To Hear)। पुराने समय में हिसाब-किताब मौखिक रूप से सुनकर जाँचा जाता था। समय के साथ लिखित रिकॉर्ड, प्रमाण और स्वतंत्र जाँच की व्यवस्था विकसित हुई।</p>
+ <h3>1.2 ऑडिट की परिभाषा (Definition)</h3>
+ <p>ऑडिट एक व्यवस्थित प्रक्रिया है जिसमें संस्था के Accounting Records और Financial Statements की जाँच करके यह राय बनाई जाती है कि वे लागू Financial Reporting Framework के अनुसार सही और निष्पक्ष स्थिति प्रस्तुत करते हैं या नहीं।</p>
+ <div class="example"><b>उदाहरण:</b> Tally में Purchase Entry ₹25,000 है। Auditor Purchase Invoice, PO, GRN, Supplier Ledger और Payment Proof देखकर Entry की पुष्टि करता है।</div>
+ <h3>1.3 Accountancy और Auditing में अंतर</h3>
+ <table><tr><th>Accountancy (लेखांकन)</th><th>Auditing (अंकेक्षण)</th></tr>
+ <tr><td>लेन-देन का रिकॉर्ड बनाना</td><td>रिकॉर्ड और प्रमाण की जाँच करना</td></tr>
+ <tr><td>Journal, Ledger और Trial Balance तैयार करना</td><td>इनकी शुद्धता और समर्थन जाँचना</td></tr>
+ <tr><td>Financial Statements बनाना</td><td>Financial Statements पर स्वतंत्र राय देना</td></tr></table>
+ <h3>1.4 ऑडिट के उद्देश्य</h3>
+ <ul><li>Financial Statements पर Opinion देना (मुख्य उद्देश्य)।</li><li>महत्वपूर्ण गलतियों और Fraud के जोखिम की पहचान करना।</li><li>Assets और Liabilities के प्रमाण जाँचना।</li><li>कानून और Accounting Standards के अनुपालन की जाँच करना।</li><li>Internal Control की कमियाँ पहचानना।</li></ul>
+ <h3>1.5 ऑडिट के प्रकार (Classes of Audit)</h3>
+ <table><tr><th>प्रकार</th><th>अर्थ</th></tr>
+ <tr><td>Internal Audit</td><td>संस्था के भीतर की स्वतंत्र आश्वासन एवं सलाहकारी जाँच</td></tr>
+ <tr><td>External Audit</td><td>बाहरी स्वतंत्र Auditor द्वारा जाँच</td></tr>
+ <tr><td>Statutory Audit</td><td>कानून के अनुसार अनिवार्य ऑडिट</td></tr>
+ <tr><td>Cost Audit</td><td>Cost Records की जाँच</td></tr>
+ <tr><td>Tax Audit</td><td>आयकर कानून के अनुसार निर्धारित ऑडिट</td></tr>
+ <tr><td>Government Audit</td><td>सरकारी संस्थाओं/खातों का ऑडिट</td></tr>
+ <tr><td>Management Audit</td><td>प्रबंधन की कार्यक्षमता और प्रक्रियाओं की समीक्षा</td></tr>
+ <tr><td>Continuous / Interim / Final Audit</td><td>क्रमशः नियमित, बीच-वर्ष और वर्षांत जाँच</td></tr></table>
+ <h3>1.6 Errors के प्रकार और Location of Errors</h3>
+ <ul><li><b>Error of Omission:</b> लेन-देन पूरी तरह या आंशिक रूप से दर्ज न करना।</li><li><b>Error of Commission:</b> गलत राशि, खाते या विवरण में दर्ज करना।</li><li><b>Error of Principle:</b> Accounting Principle के विरुद्ध वर्गीकरण।</li><li><b>Compensating Error:</b> दो या अधिक गलतियाँ एक-दूसरे का प्रभाव संतुलित कर दें।</li><li><b>Duplication:</b> एक ही लेन-देन दो बार दर्ज करना।</li></ul>
+ <h3>1.7 Auditing Practices और Standards</h3>
+ <p>GAAP सामान्यतः स्वीकृत Accounting Principles को कहा जाता है। Auditing में Auditor को लागू Standards on Auditing (SA), नैतिक आवश्यकताओं और संबंधित कानूनों का पालन करना होता है।</p>
+ <h3>1.8 Audit Evidence (ऑडिट प्रमाण)</h3>
+ <p>Auditor की राय के समर्थन में जुटाई गई जानकारी Audit Evidence कहलाती है। प्रमाण पर्याप्त (Sufficient) और उपयुक्त (Appropriate) होना चाहिए।</p>
+ <ul><li>Documentary: Invoice, Voucher, Contract</li><li>External: Bank Confirmation, Supplier Confirmation</li><li>Physical: Stock या Asset का निरीक्षण</li><li>Analytical: Ratios, Trends और तुलना</li><li>Oral: पूछताछ से मिली जानकारी; इसे अन्य प्रमाण से corroborate करना चाहिए</li></ul>
+ <h3>1.9 Auditing in Depth</h3>
+ <p>महत्वपूर्ण लेन-देन को शुरुआत से अंत तक ट्रेस करना।</p>
+ <div class="flow"><span>Purchase Order</span><b>→</b><span>GRN</span><b>→</b><span>Invoice</span><b>→</b><span>Ledger</span><b>→</b><span>Payment</span></div>
+ <h3>1.10 Accounting / Auditing Statements</h3>
+ <ul><li>Trading Account – Gross Profit या Gross Loss।</li><li>Profit & Loss Account – Net Profit या Net Loss।</li><li>Balance Sheet – Assets, Liabilities और Equity।</li><li>Cash Flow Statement – Cash Inflow और Outflow।</li><li>Statement of Changes in Equity – Equity में बदलाव।</li></ul>
+</section>
+
+<section id="ch2">
+ <span class="tag">अध्याय 2</span><h2>Auditor's Functions, Ethics & Independence</h2>
+ <h3>2.1 Auditor के कार्य</h3>
+ <ul><li>Books of Accounts और Vouchers की जाँच।</li><li>Cash, Bank, Purchase और Sales Transactions Verify करना।</li><li>Assets, Liabilities और Inventory के प्रमाण जाँचना।</li><li>Fraud और Material Misstatement के जोखिम का आकलन।</li><li>Audit Evidence एकत्र करना और Audit Report देना।</li></ul>
+ <h3>2.2 Integrity, Objectivity और Independence</h3>
+ <table><tr><th>सिद्धांत</th><th>अर्थ</th><th>उदाहरण</th></tr>
+ <tr><td>Integrity</td><td>ईमानदारी और सत्यनिष्ठा</td><td>गलत Entry को छिपाना नहीं</td></tr>
+ <tr><td>Objectivity</td><td>निष्पक्ष निर्णय</td><td>व्यक्तिगत संबंध से प्रभावित न होना</td></tr>
+ <tr><td>Independence</td><td>विचार और व्यवहार में स्वतंत्रता</td><td>Management के दबाव में राय न बदलना</td></tr></table>
+ <h3>2.3 Code of Ethics</h3>
+ <ol><li>Integrity – ईमानदारी।</li><li>Objectivity – निष्पक्षता।</li><li>Professional Competence and Due Care – पेशेवर योग्यता और उचित सावधानी।</li><li>Confidentiality – गोपनीयता।</li><li>Professional Behaviour – पेशेवर आचरण।</li></ol>
+ <h3>2.4 Section 226 और Section 314</h3>
+ <div class="callout">Syllabus में ये Companies Act, 1956 के पुराने प्रावधान हैं। पुराने Act में Section 226 Auditor की Qualification/Disqualification से और Section 314 Office or Place of Profit से संबंधित था। वर्तमान Companies Act, 2013 में Auditor की Qualification/Disqualification मुख्यतः Section 141 में है। Section 314 को वर्तमान Auditor Qualification का Section न समझें।</div>
+</section>
+
+<section id="ch3">
+ <span class="tag">अध्याय 3</span><h2>Audit Planning, Programme & Quality Control</h2>
+ <h3>3.1 Audit Planning</h3><p>ऑडिट शुरू करने से पहले उद्देश्य, कार्यक्षेत्र, समय, टीम, जोखिम और जाँच की प्रकृति तय करना Audit Planning है।</p>
+ <h3>3.2 Planning को प्रभावित करने वाले कारक</h3>
+ <ol><li>व्यवसाय का आकार और प्रकृति।</li><li>Accounting System और IT Environment।</li><li>Internal Control की मजबूती।</li><li>पिछले वर्ष की Audit Report।</li><li>Fraud और Error का जोखिम।</li><li>कानूनी आवश्यकताएँ और समय-सीमा।</li><li>कर्मचारियों की योग्यता और उपलब्ध बजट।</li></ol>
+ <h3>3.3 Audit Programme</h3><p>लिखित कार्ययोजना जिसमें जाँच का विषय, प्रक्रिया, जिम्मेदार व्यक्ति और समय दर्ज होता है।</p>
+ <table><tr><th>क्षेत्र</th><th>मुख्य दस्तावेज</th></tr><tr><td>Cash</td><td>Cash Book, Receipt/Payment Vouchers</td></tr><tr><td>Bank</td><td>Bank Statement, BRS</td></tr><tr><td>Purchase</td><td>PO, GRN, Purchase Invoice</td></tr><tr><td>Sales</td><td>Sales Invoice, Dispatch Proof</td></tr><tr><td>Inventory</td><td>Stock Register, Physical Count</td></tr><tr><td>GST</td><td>Books, GSTR-1, GSTR-3B, Reconciliation</td></tr></table>
+ <h3>3.4 Quality Control</h3><p>ऑडिट की गुणवत्ता बनाए रखने के लिए योग्य टीम, उचित Supervision, Review, Documentation, Ethical Compliance और समय पर सुधार आवश्यक हैं।</p>
+</section>
+
+<section id="ch4">
+ <span class="tag">अध्याय 4</span><h2>Laws and Regulations in an Audit</h2>
+ <p>Auditor को Financial Statements का ऑडिट करते समय लागू कानूनों और विनियमों पर विचार करना होता है।</p>
+ <table><tr><th>कानून</th><th>संबंधित क्षेत्र</th></tr>
+ <tr><td>Companies Act, 2013</td><td>कंपनी का Statutory Audit और Auditor के प्रावधान</td></tr>
+ <tr><td>Income-tax Act, 1961</td><td>आयकर और Tax Audit</td></tr>
+ <tr><td>CGST Act, 2017</td><td>GST Records और Compliance</td></tr>
+ <tr><td>Banking Regulation Act, 1949</td><td>बैंकिंग विनियमन</td></tr>
+ <tr><td>Insurance Act, 1938</td><td>बीमा व्यवसाय का विनियमन</td></tr>
+ <tr><td>LLP Act, 2008</td><td>LLP से संबंधित प्रावधान</td></tr></table>
+ <h3>Audit Procedures</h3>
+ <ul><li>Registration, Licences और Statutory Records देखना।</li><li>GST Returns और Books का Reconciliation।</li><li>TDS, PF, ESIC आदि की लागू होने पर जाँच।</li><li>Legal Notices, Claims और Contingent Liabilities की समीक्षा।</li><li>Management से पूछताछ और Supporting Documents का निरीक्षण।</li></ul>
+ <div class="example"><b>GST उदाहरण:</b> Books में Sales ₹10,00,000 और GSTR-1 में ₹9,50,000 है। ₹50,000 के अंतर का कारण Invoice Omission, Credit Note, Timing Difference या Reporting Error हो सकता है। कारण और प्रमाण जाँचें।</div>
+</section>
+
+<section id="ch5">
+ <span class="tag">अध्याय 5</span><h2>Internal Control, Internal Check & Internal Audit</h2>
+ <h3>5.1 Internal Control</h3><p>संस्था द्वारा बनाई गई नीतियों और प्रक्रियाओं की व्यवस्था जिससे संचालन प्रभावी हो, Assets सुरक्षित रहें, Records विश्वसनीय हों और कानूनों का पालन हो।</p>
+ <h3>5.2 महत्व</h3><ul><li>गलतियों और धोखाधड़ी के जोखिम को कम करना।</li><li>Assets की सुरक्षा।</li><li>सही Financial Reporting।</li><li>काम की दक्षता और जवाबदेही बढ़ाना।</li></ul>
+ <h3>5.3 Internal Check</h3><p>काम का ऐसा विभाजन जिसमें एक व्यक्ति का काम दूसरे व्यक्ति की जाँच या नियंत्रण में रहे।</p>
+ <div class="flow"><span>Purchase Team: PO</span><b>→</b><span>Store: GRN</span><b>→</b><span>Accounts: Invoice</span><b>→</b><span>Manager: Approval</span></div>
+ <h3>5.4 Internal Audit</h3><p>संस्था के संचालन, जोखिम प्रबंधन और नियंत्रण की व्यवस्थित समीक्षा। यह Management को सुधार के अवसर बताती है; इसकी स्वतंत्रता और निष्पक्षता बनाए रखना जरूरी है।</p>
+ <h3>5.5 Internal Control का मूल्यांकन</h3><ol><li>प्रक्रिया समझना और Flowchart बनाना।</li><li>कर्मचारियों से पूछताछ और दस्तावेज निरीक्षण।</li><li>Walkthrough और Control Testing करना।</li><li>कमियों और उनके प्रभाव का मूल्यांकन।</li><li>सुधार की सिफारिश और रिपोर्टिंग।</li></ol>
+</section>
+
+<section id="ch6">
+ <span class="tag">अध्याय 6</span><h2>Vouching & Audit of Financial Statements</h2>
+ <h3>6.1 Vouching का अर्थ</h3><p>Accounting Entry को उसके समर्थन में उपलब्ध मूल या विश्वसनीय दस्तावेजों से जाँचना Vouching कहलाता है।</p>
+ <h3>6.2 उद्देश्य</h3><ul><li>लेन-देन वास्तविक और अधिकृत है या नहीं।</li><li>राशि, तारीख और Account Head सही हैं या नहीं।</li><li>Duplicate, fictitious या omitted transactions की पहचान।</li><li>सही Accounting Period में Entry हुई या नहीं।</li></ul>
+ <h3>6.3 Substantive Procedures</h3><p>ऐसी प्रक्रियाएँ जिनसे Auditor सीधे यह जाँचता है कि Financial Statements में महत्वपूर्ण गलत विवरण तो नहीं हैं। उदाहरण: Test of Details, External Confirmation, Recalculation और Analytical Procedures।</p>
+ <h3>6.4 Cash Transactions की Vouching</h3>
+ <table><tr><th>Cash Receipts</th><th>Cash Payments</th></tr><tr><td>Receipt Voucher</td><td>Payment Voucher</td></tr><tr><td>Cash Sales Record</td><td>Expense Bill</td></tr><tr><td>Bank Deposit Slip</td><td>Supplier Invoice</td></tr><tr><td>Customer Ledger</td><td>Approval Evidence</td></tr></table>
+ <h3>6.5 Trading Transactions की Vouching</h3>
+ <b>Purchase:</b><div class="flow"><span>PO</span><b>→</b><span>GRN</span><b>→</b><span>Invoice</span><b>→</b><span>Purchase Register</span><b>→</b><span>Payment</span></div>
+ <b>Sales:</b><div class="flow"><span>Customer Order</span><b>→</b><span>Invoice</span><b>→</b><span>Dispatch Proof</span><b>→</b><span>Sales Register</span><b>→</b><span>Receipt</span></div>
+ <h3>6.6 Financial Statements का ऑडिट</h3>
+ <h3>A. Depreciation (मूल्यह्रास)</h3><p>Fixed Asset की depreciable amount को उसके उपयोगी जीवन में व्यवस्थित रूप से बाँटना Depreciation है।</p><div class="example">उदाहरण: मशीन की लागत ₹1,00,000 और सरल उदाहरण में वार्षिक Depreciation 10% हो तो एक वर्ष का Depreciation ₹10,000 होगा। वास्तविक गणना लागू Accounting Standard, उपयोगी जीवन, अवशिष्ट मूल्य और चुनी गई विधि के अनुसार होगी।</div>
+ <h3>B. Inventory Valuation</h3><p>Inventory को सामान्यतः Cost और Net Realisable Value (NRV) में जो कम हो उस पर मापा जाता है। Cost Formula जैसे FIFO या Weighted Average लागू नीति के अनुसार हो सकता है।</p>
+ <h3>C. Share Capital</h3><p>Authorised, Issued, Subscribed और Paid-up Capital, Share Allotment और संबंधित ROC Records की जाँच करें।</p>
+ <h3>D. Reserve and Surplus</h3><p>General Reserve, Securities Premium और Retained Earnings के Opening Balance, Additions, Utilisation और Closing Balance Verify करें।</p>
+ <h3>E. Current Assets और Current Liabilities</h3><p>Current Assets: Cash, Bank, Inventory, Trade Receivables और Short-term Advances। Current Liabilities: Trade Payables, Outstanding Expenses, Short-term Borrowings और Statutory Dues।</p>
+ <h3>F. Investments</h3><p>Purchase Proof, Ownership, Valuation, Income और Classification की जाँच करें।</p>
+ <h3>G. Fixed Assets</h3><p>Invoice, Ownership, Physical Existence, Asset Register, Depreciation और Disposal Records की जाँच करें।</p>
+</section>
+
+<section id="ch7">
+ <span class="tag">अध्याय 7</span><h2>Appointment, Rights, Duties & Liabilities of Auditor</h2>
+ <h3>7.1 Appointment</h3><p>Companies Act, 2013 का Section 139 Auditor की नियुक्ति से संबंधित है। कंपनी के प्रथम Auditor, Subsequent Auditor और Government Company के लिए अलग-अलग वैधानिक प्रक्रियाएँ हैं।</p>
+ <h3>7.2 Qualification</h3><p>Section 141 के अनुसार कंपनी का Auditor बनने के लिए सामान्यतः Chartered Accountant होना आवश्यक है; Firm/LLP की नियुक्ति और अन्य शर्तें भी कानून में दी गई हैं।</p>
+ <h3>7.3 Rights</h3><ul><li>Books of Accounts और Vouchers तक पहुँच।</li><li>अधिकारी से आवश्यक जानकारी और Explanation माँगना।</li><li>Branch Auditor की Report प्राप्त करना।</li><li>कानून के अनुसार General Meeting में उपस्थित होना और सुना जाना।</li></ul>
+ <h3>7.4 Duties</h3><ul><li>लागू Standards on Auditing के अनुसार काम करना।</li><li>पर्याप्त और उपयुक्त Audit Evidence लेना।</li><li>Material Misstatement के जोखिम का मूल्यांकन करना।</li><li>Audit Documentation और Report तैयार करना।</li><li>कानूनी Reporting Requirements का पालन करना।</li></ul>
+ <h3>7.5 Liabilities</h3><p>परिस्थिति के अनुसार Civil, Criminal, Professional या Statutory Liability उत्पन्न हो सकती है। केवल Auditor होने से हर व्यावसायिक नुकसान की स्वतः जिम्मेदारी नहीं बनती; संबंधित कानून और तथ्यों को देखना आवश्यक है।</p>
+ <h3>7.6 Companies Act के महत्वपूर्ण Sections</h3>
+ <table><tr><th>Section</th><th>विषय</th></tr><tr><td>139</td><td>Appointment of Auditor</td></tr><tr><td>140</td><td>Removal and Resignation</td></tr><tr><td>141</td><td>Qualification and Disqualification</td></tr><tr><td>142</td><td>Remuneration</td></tr><tr><td>143</td><td>Powers and Duties</td></tr><tr><td>144</td><td>Prohibited Services</td></tr><tr><td>145</td><td>Signing of Audit Report</td></tr><tr><td>146</td><td>Auditor to Attend General Meeting</td></tr><tr><td>147</td><td>Punishment for Contravention</td></tr><tr><td>148</td><td>Central Government to Specify Audit of Items of Cost</td></tr></table>
+</section>
+
+<section id="ch8">
+ <span class="tag">अध्याय 8</span><h2>Cost Audit, CARO & Management Audit</h2>
+ <h3>8.1 Cost Audit</h3><p>Cost Records और Cost Statements की जाँच ताकि लागत की गणना, आवंटन और रिकॉर्ड की विश्वसनीयता पर राय बन सके। Section 148 और संबंधित Rules के अनुसार कुछ निर्धारित कंपनियों पर Cost Audit लागू हो सकता है।</p>
+ <div class="example"><b>उदाहरण – Shirt Manufacturing Cost:</b> Fabric ₹200 + Stitching ₹50 + Buttons ₹10 + Packing ₹20 + Other Cost ₹20 = कुल ₹300 प्रति Shirt। यह केवल उदाहरण है; वास्तविक Cost Sheet में लागू Costing Principles के अनुसार लागत तय होगी।</div>
+ <h3>8.2 Cost Audit Procedures</h3><ol><li>Raw Material Consumption जाँचना।</li><li>Labour Cost और Wages Verify करना।</li><li>Factory Overheads का Allocation जाँचना।</li><li>Production, Wastage और Rejection Records देखना।</li><li>Cost Sheet और Inventory Valuation जाँचना।</li></ol>
+ <h3>8.3 CARO</h3><p>CARO का पूरा नाम Companies (Auditor's Report) Order है। CARO 2020, Companies Act, 2013 के Section 143(11) के अंतर्गत जारी किया गया। Applicability और exemptions संबंधित Order के अनुसार जाँचें।</p>
+ <p>प्रमुख reporting areas में Property, Plant and Equipment, Inventory, Loans, Statutory Dues, Borrowings, Fraud, Internal Audit और अन्य निर्धारित विषय शामिल हैं।</p>
+ <h3>8.4 MAOCARO</h3><p>MAOCARO पुराने Companies Act, 1956 के समय का Manufacturing and Other Companies (Auditor's Report) Order था। इसे वर्तमान CARO 2020 से अलग समझें।</p>
+ <h3>8.5 Management Audit</h3><p>Management की नीतियों, निर्णयों, संसाधन उपयोग और कार्यक्षमता की व्यवस्थित समीक्षा Management Audit कहलाती है। इससे Productivity, Cost Control और Decision Making में सुधार के अवसर मिलते हैं।</p>
+</section>
+
+<section id="ch9">
+ <span class="tag">अध्याय 9</span><h2>Special Types of Audit</h2>
+ <h3>9.1 Banking Companies Audit</h3><p>Deposits, Advances, NPA, Interest, Investments, Cash, Regulatory Returns और Internal Controls की जाँच की जाती है।</p>
+ <ul><li>Loan Sanction और Documentation।</li><li>Borrower Balance Confirmation।</li><li>Interest Calculation और Income Recognition।</li><li>NPA Classification और Provisioning।</li><li>RBI Directions और लागू Banking Laws का अनुपालन।</li></ul>
+ <h3>9.2 Cooperative Banks and Institutions</h3><p>Members Register, Share Capital, Deposits, Loans, Overdue Accounts, Interest, Statutory Compliance और Financial Statements की जाँच की जाती है। लागू राज्य/केंद्रीय सहकारी कानून भी देखे जाते हैं।</p>
+ <h3>9.3 General Insurance Companies</h3><p>Motor, Health, Fire, Marine और Property Insurance जैसे व्यवसायों में Premium, Claims, Outstanding Claims, Reinsurance, Commission, Investments और Technical Reserves की जाँच की जाती है।</p>
+ <h3>9.4 Partnership Accounts Audit</h3><p>Partnership Deed, Capital, Drawings, Profit Sharing Ratio, Interest on Capital/Drawings, Partner Remuneration और Profit Distribution Verify करें।</p>
+ <div class="example">उदाहरण: कुल बाँटने योग्य लाभ ₹1,00,000 और A:B का अनुपात 60:40 है। A का हिस्सा ₹60,000 और B का हिस्सा ₹40,000 होगा, बशर्ते Deed में यही अनुपात और आधार निर्धारित हो।</div>
+ <h3>9.5 Government Companies Audit</h3><p>Companies Act के अनुसार Government Company के Audit में CAG की विशेष भूमिका होती है। लागू प्रावधानों के अंतर्गत Auditor की नियुक्ति, निर्देश और Supplementary Audit की व्यवस्था हो सकती है।</p>
+</section>
+
+<section id="ch10">
+ <span class="tag">अध्याय 10</span><h2>Auditing in an EDP Environment</h2>
+ <h3>10.1 EDP का अर्थ</h3><p>EDP का पूरा नाम Electronic Data Processing है। जब Accounting और Business Data को Computer System या Software द्वारा Process किया जाता है, तो वह EDP Environment कहलाता है। उदाहरण: Tally Prime, SAP, Oracle, Busy, Excel और ERP Systems।</p>
+ <h3>10.2 EDP Environment में Audit</h3><p>Auditor को Software, User Access, Data Processing, Reports, Interfaces, Backups और IT Controls समझकर जाँच करनी होती है।</p>
+ <h3>10.3 प्रमुख समस्याएँ</h3><ul><li>Unauthorized Access और Password Sharing।</li><li>गलत Software Configuration।</li><li>Data Manipulation या Deletion।</li><li>Duplicate या Missing Entries।</li><li>Virus, Malware और Cyber Risk।</li><li>Data Loss और अपर्याप्त Backup।</li><li>गलत GST या Tax Configuration।</li></ul>
+ <h3>10.4 EDP Controls</h3>
+ <table><tr><th>Control</th><th>उद्देश्य</th></tr><tr><td>Password / Access Control</td><td>केवल अधिकृत User को पहुँच</td></tr><tr><td>Backup and Recovery</td><td>Data Loss से बचाव</td></tr><tr><td>Audit Trail</td><td>किसने, कब और क्या बदलाव किया</td></tr><tr><td>Input Validation</td><td>गलत Data Entry रोकना</td></tr><tr><td>Approval Workflow</td><td>अधिकृत स्वीकृति सुनिश्चित करना</td></tr><tr><td>Firewall / Security</td><td>Network और System सुरक्षा</td></tr></table>
+ <h3>10.5 CAATs</h3><p>Computer Assisted Audit Techniques में Computer Tools का उपयोग करके Data Analysis और Audit Testing की जाती है।</p>
+ <ul><li>Duplicate Invoice Detection।</li><li>Missing Serial Number Check।</li><li>GST Recalculation और Reconciliation।</li><li>Unusual Transactions और Exception Reports।</li><li>Computerised Sampling और Data Analytics।</li></ul>
+ <div class="example"><b>Practical Tally Audit:</b> Sales Register, Purchase Register, Day Book, Trial Balance, Stock Summary, Ledger, GST Reports और Audit Trail (जहाँ उपलब्ध/लागू हो) की जाँच करें।</div>
+</section>
+
+<section id="practical">
+ <span class="tag">प्रैक्टिकल ट्रेनिंग</span><h2>Company Audit – Step-by-Step Workflow</h2>
+ <h3>1. Purchase Audit</h3>
+ <div class="flow"><span>Purchase Order</span><b>→</b><span>GRN</span><b>→</b><span>Purchase Invoice</span><b>→</b><span>Tally Entry</span><b>→</b><span>Supplier Ledger</span><b>→</b><span>Payment</span></div>
+ <ul><li>PO में Quantity, Rate और Approval देखें।</li><li>GRN से प्राप्त माल की मात्रा मिलाएँ।</li><li>Invoice में GSTIN, HSN, Tax और Total जाँचें।</li><li>Purchase Register और Supplier Ledger से मिलान करें।</li><li>Payment को Bank Statement से Verify करें।</li></ul>
+ <h3>2. Sales Audit</h3>
+ <div class="flow"><span>Customer Order</span><b>→</b><span>Sales Invoice</span><b>→</b><span>Dispatch</span><b>→</b><span>GST Return</span><b>→</b><span>Payment</span></div>
+ <ul><li>Invoice और Order Details मिलाएँ।</li><li>Dispatch Proof और लागू होने पर E-way Bill देखें।</li><li>Sales Register और Customer Ledger जाँचें।</li><li>GSTR-1 और Books का Reconciliation करें।</li><li>Returns, Credit Notes और Settlement जाँचें।</li></ul>
+ <h3>3. Inventory Audit</h3><ul><li>Physical Stock Count और Stock Register मिलाएँ।</li><li>Shortage, Excess, Damage और Slow-moving Stock पहचानें।</li><li>Closing Stock Valuation जाँचें।</li></ul>
+ <h3>4. Bank Reconciliation</h3>
+ <table><tr><th>विवरण</th><th>राशि</th></tr><tr><td>Cash Book Bank Balance</td><td>₹50,000</td></tr><tr><td>Bank Statement Balance</td><td>₹45,000</td></tr><tr><td>अंतर</td><td>₹5,000</td></tr></table>
+ <p>अंतर के संभावित कारण: Cheque Issued but Not Presented, Cheque Deposited but Not Credited, Bank Charges या अन्य Timing Differences। वास्तविक कारण प्रमाण से Verify करें।</p>
+ <h3>5. Audit Opinion के प्रकार</h3>
+ <table><tr><th>Opinion</th><th>अर्थ</th></tr><tr><td>Unmodified</td><td>Financial Statements पर बिना संशोधित राय</td></tr><tr><td>Qualified</td><td>कुछ विशेष विषयों के प्रभाव को छोड़कर राय</td></tr><tr><td>Adverse</td><td>Material और Pervasive गलतियों के कारण Statements सही/निष्पक्ष स्थिति नहीं दिखाते</td></tr><tr><td>Disclaimer</td><td>पर्याप्त उपयुक्त प्रमाण न मिलने से राय देने में असमर्थता</td></tr></table>
+ <div class="callout"><b>याद रखें:</b> Auditor का उद्देश्य Reasonable Assurance प्राप्त करना है, Absolute Guarantee देना नहीं। Fraud की रोकथाम की प्राथमिक जिम्मेदारी Management और Those Charged with Governance की होती है; Auditor को Fraud से उत्पन्न Material Misstatement के जोखिम पर उचित कार्य करना होता है।</div>
+</section>
+
+<section id="questions">
+ <span class="tag">परीक्षा तैयारी</span><h2>महत्वपूर्ण प्रश्न</h2>
+ <h3>2 अंक वाले प्रश्न</h3>
+ <ol><li>Audit क्या है?</li><li>Vouching का अर्थ बताइए।</li><li>Internal Audit क्या है?</li><li>Audit Evidence क्या है?</li><li>Fraud और Error में अंतर बताइए।</li><li>Depreciation क्या है?</li><li>CARO का पूरा नाम बताइए।</li><li>EDP और CAATs क्या हैं?</li><li>Auditor की Independence क्या है?</li><li>NPA क्या है?</li></ol>
+ <h3>5 अंक वाले प्रश्न</h3>
+ <ol><li>Accountancy और Auditing में अंतर समझाइए।</li><li>Audit Planning को प्रभावित करने वाले कारक बताइए।</li><li>Internal Control का महत्व समझाइए।</li><li>Cash Transactions की Vouching समझाइए।</li><li>Auditor के अधिकार और कर्तव्य लिखिए।</li><li>EDP Environment की समस्याएँ बताइए।</li></ol>
+ <h3>10–15 अंक वाले प्रश्न</h3>
+ <ol><li>ऑडिट का इतिहास, परिभाषा, उद्देश्य एवं प्रकार समझाइए।</li><li>Auditor की नियुक्ति, अधिकार, कर्तव्य एवं दायित्व समझाइए।</li><li>Internal Control, Internal Check और Internal Audit में अंतर स्पष्ट कीजिए।</li><li>Vouching का अर्थ, उद्देश्य तथा Cash और Trading Transactions की Vouching समझाइए।</li><li>Financial Statements के Audit की प्रक्रिया समझाइए।</li><li>Cost Audit और Management Audit में अंतर बताइए।</li><li>Banking Companies के Audit की प्रक्रिया समझाइए।</li><li>EDP Environment में Audit की समस्याएँ और नियंत्रण समझाइए।</li></ol>
+</section>
+</div>
+
+<div class="quiz">
+ <h2>छोटा अभ्यास टेस्ट (MCQ)</h2>
+ <p class="small">हर प्रश्न का एक सही उत्तर चुनें और अंत में परिणाम देखें।</p>
+ <form id="quizForm">
+  <div class="q"><b>1. Audit शब्द किस लैटिन शब्द से निकला है?</b>
+   <label><input type="radio" name="q1" value="0"> Audire</label><label><input type="radio" name="q1" value="1"> Account</label><label><input type="radio" name="q1" value="2"> Auditum</label></div>
+  <div class="q"><b>2. Purchase Bill की जाँच किस प्रक्रिया में होती है?</b>
+   <label><input type="radio" name="q2" value="0"> Posting</label><label><input type="radio" name="q2" value="1"> Vouching</label><label><input type="radio" name="q2" value="2"> Balancing</label></div>
+  <div class="q"><b>3. Companies Act, 2013 में Auditor की नियुक्ति किस Section में है?</b>
+   <label><input type="radio" name="q3" value="0"> 141</label><label><input type="radio" name="q3" value="1"> 143</label><label><input type="radio" name="q3" value="2"> 139</label></div>
+  <div class="q"><b>4. EDP का पूरा नाम क्या है?</b>
+   <label><input type="radio" name="q4" value="0"> Electronic Data Processing</label><label><input type="radio" name="q4" value="1"> External Data Program</label><label><input type="radio" name="q4" value="2"> Electronic Document Process</label></div>
+  <div class="q"><b>5. CARO का पूरा नाम क्या है?</b>
+   <label><input type="radio" name="q5" value="0"> Company Accounts Rules Order</label><label><input type="radio" name="q5" value="1"> Companies (Auditor's Report) Order</label><label><input type="radio" name="q5" value="2"> Cost Audit Report Office</label></div>
+  <button type="button" onclick="checkQuiz()">Submit Answers</button>
+  <button type="reset" style="background:#475569" onclick="document.getElementById('quizResult').textContent=''">Reset</button>
+  <div id="quizResult" class="result" aria-live="polite"></div>
+ </form>
+</div>
+</main>
+</div>
+<footer>Auditing Theory – Hindi Training Notes | अध्ययन और प्रशिक्षण हेतु</footer>
+<script>
+function checkQuiz(){
+ const answers={q1:"0",q2:"1",q3:"2",q4:"0",q5:"1"};
+ let score=0,attempted=0;
+ for(const [q,a] of Object.entries(answers)){
+  const selected=document.querySelector('input[name="'+q+'"]:checked');
+  if(selected){attempted++;if(selected.value===a)score++;}
+ }
+ const el=document.getElementById('quizResult');
+ el.textContent=attempted<5 ? `आपने ${attempted}/5 प्रश्न हल किए हैं। सभी प्रश्नों के उत्तर चुनें।` : `आपका स्कोर: ${score}/5`;
+}
+</script>
+</body>
+</html>
